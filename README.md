@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Frontegg Home Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created as part of the application process for the Tier-1 Technical Support Engineer role at Frontegg.
 
-Currently, two official plugins are available:
+## 📦 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React + Vite
+- TypeScript
+- Frontegg SDK
 
-## Expanding the ESLint configuration
+## ✅ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- User authentication via Frontegg Hosted Login
+- Profile picture and name display after login
+- Admin Portal integration (`AdminPortal.show()`)
+- Access token popup
+- Logout button
+- Metadata display per user
+- TEST USER badge based on metadata
+- Role display based on metadata
+- Switch Tenant dropdown (multi-tenant support)
+- Custom user metadata for bonus
+- vikram.moule@frontegg.com invited with limited role
+- Magic Link login enabled only
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Getting Started Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Create a `.env` file in the root with the following (replace with your Frontegg credentials):
+
+```env
+VITE_BASE_URL=https://your-env.frontegg.com
+VITE_CLIENT_ID=your-client-id
+VITE_APP_ID=your-app-id
+```
+
+4. Run the app:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📄 Notes
+
+- All functionality is implemented using Frontegg SDK only.
+- This project is not deployed, it runs locally on `http://localhost:5173`.
+- Please ensure `localhost:5173` is whitelisted in your Frontegg environment settings (CORS + Redirect).
+
+---
+
+Made with ❤️ by Guy First
